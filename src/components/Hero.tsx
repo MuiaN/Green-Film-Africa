@@ -25,8 +25,17 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-sm font-medium mb-6">
-              <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+              <motion.span 
+                className="w-2 h-2 rounded-full bg-accent"
+                animate={{ opacity: [1, 0, 1] }}
+                transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+              />
               Restoring ecosystems in Africa
+              <motion.span 
+                className="w-2 h-2 rounded-full bg-primary"
+                animate={{ opacity: [0, 1, 0] }}
+                transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+              />
             </div>
 
             <h1 className="text-5xl md:text-7xl font-black text-white leading-[1.1] mb-6 font-heading tracking-tight">

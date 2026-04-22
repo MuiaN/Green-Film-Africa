@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Linkedin, Instagram } from "lucide-react";
+import { Linkedin, Instagram, ExternalLink } from "lucide-react";
 
 const footerLinks = [
   {
@@ -24,7 +24,7 @@ const footerLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-foreground text-white py-16 md:py-20 border-t border-white/10">
+    <footer className="bg-foreground text-white pt-16 md:pt-20 pb-8 md:pb-10 border-t border-white/10">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
           <div className="lg:col-span-2 space-y-6">
@@ -74,6 +74,19 @@ export function Footer() {
 
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/40">
           <p>© {new Date().getFullYear()} Green Film Africa. All rights reserved.</p>
+          
+          <p className="flex items-center gap-1.5 order-last md:order-none">
+            Powered by{" "}
+            <a 
+              href="https://tytantech.co.ke/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary font-medium hover:underline flex items-center gap-1 transition-colors"
+            >
+              tytantech <ExternalLink className="w-3.5 h-3.5" />
+            </a>
+          </p>
+
           <div className="flex gap-6">
             <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</Link>
