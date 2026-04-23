@@ -9,9 +9,15 @@ import { fadeUp, stagger } from "@/lib/animations";
 const contactInfo = [
   {
     icon: Mail,
-    label: "Email Us",
+    label: "Primary Email",
     value: "info@greenfilmafrica.org",
     href: "mailto:info@greenfilmafrica.org",
+  },
+  {
+    icon: Mail,
+    label: "Secondary Email",
+    value: "terrateah@gmail.com",
+    href: "mailto:terrateah@gmail.com",
   },
   {
     icon: MapPin,
@@ -22,8 +28,35 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Call Us",
-    value: "+254 (0) 700 000 000",
-    href: "tel:+254700000000",
+    value: "+254 119 938 228",
+    href: "tel:+254119938228",
+  },
+];
+
+const faqs = [
+  {
+    question: "What is Green Film Production?",
+    answer: "Green Film Production is an environmentally friendly and sustainable way of producing films. It involves eco-friendly practices that minimise the negative impact of film production on the environment — covering everything from energy use and waste management to community engagement and supply chain choices.",
+  },
+  {
+    question: "What is the difference between sustainable and regenerative filmmaking?",
+    answer: "Sustainability asks \"how do we stop the damage?\" — it aims for net neutral impact. Regeneration asks \"how do we reverse it?\" — it aims for net positive impact, leaving the location, community, and ecosystem better than before. One is a ceiling. The other is a direction.",
+  },
+  {
+    question: "Does going green cost more?",
+    answer: "No — going green saves 15–20% on average production costs. Fuel, waste disposal, and logistics are all cheaper when you plan them sustainably. Beyond savings, ESG compliance is now required by Netflix, BBC, and major brands. Without it, you cannot access those commissions.",
+  },
+  {
+    question: "Who are your services designed for?",
+    answer: "We work with production companies, broadcasters, service providers, associations, film schools, and institutions. Our programmes serve everyone from secondary school students to senior producers — because the shift to regenerative filmmaking requires the whole ecosystem to move together.",
+  },
+  {
+    question: "What is PropBank™?",
+    answer: "PropBank™ is Africa's first circular film resource database — a platform where productions can list, search, rent, swap, or donate props, wardrobe, lighting, camera gear, sound equipment, art department materials, vehicles, catering equipment, and post-production technology. One production's wrap is another's prep.",
+  },
+  {
+    question: "How do I get involved?",
+    answer: "You can apply for the Climate Cohort, register your production on PropBank™, enrol in our education programmes, attend a community wellness screening, or partner with us institutionally. Contact Justine directly at info@greenfilmafrica.org or +254 119 938 228.",
   },
 ];
 
@@ -163,9 +196,13 @@ export default function Contact() {
                 <motion.div variants={fadeUp} className="p-6 rounded-2xl bg-primary text-white">
                   <h3 className="font-heading font-bold text-lg mb-3">Partnership Enquiries</h3>
                   <p className="text-white/80 text-sm leading-relaxed">
-                    For corporate partnerships, sponsorships, and large-scale collaboration, please reach out to our partnerships team at{" "}
-                    <a href="mailto:partners@greenfilmafrica.org" className="text-accent font-semibold hover:underline">
-                      partners@greenfilmafrica.org
+                    Our strategic solutions are tailored for production companies, broadcasters, and institutions. Reach out directly to our Lead Consultant, Justine, at:
+                    <br />
+                    <a href="mailto:info@greenfilmafrica.org" className="text-accent font-semibold hover:underline block mt-2">
+                      info@greenfilmafrica.org
+                    </a>
+                    <a href="mailto:terrateah@gmail.com" className="text-white/60 text-xs hover:text-white transition-colors">
+                      terrateah@gmail.com
                     </a>
                   </p>
                 </motion.div>
@@ -295,6 +332,50 @@ export default function Contact() {
                 )}
               </motion.div>
             </div>
+          </div>
+        </section>
+
+        {/* FAQs Section */}
+        <section className="py-20 md:py-28 bg-white border-t border-border/60">
+          <div className="container mx-auto px-4 md:px-6">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={stagger}
+              className="mb-16 text-center max-w-3xl mx-auto"
+            >
+              <div className="section-label mx-auto">Frequently Asked Questions</div>
+              <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl font-black font-heading text-foreground mt-4 mb-4">
+                Your Questions, <span className="text-primary italic">Answered</span>
+              </motion.h2>
+              <motion.p variants={fadeUp} className="text-lg text-muted-foreground leading-relaxed">
+                Everything you need to know about Africa's first regenerative filmmaking movement.
+              </motion.p>
+            </motion.div>
+
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={stagger}
+              className="grid md:grid-cols-2 gap-6 lg:gap-8"
+            >
+              {faqs.map((faq, i) => (
+                <motion.div
+                  key={i}
+                  variants={fadeUp}
+                  className="p-8 rounded-2xl border border-border/60 bg-sidebar hover:border-primary/30 hover:shadow-md transition-all group"
+                >
+                  <h4 className="font-heading font-bold text-lg text-primary mb-4 group-hover:text-primary transition-colors">
+                    {faq.question}
+                  </h4>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </motion.div>
+              ))}
+            </motion.div>
           </div>
         </section>
 

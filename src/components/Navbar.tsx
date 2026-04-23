@@ -8,6 +8,9 @@ const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
+  { label: "PropBank™", href: "/propbank" },
+  { label: "Cohort", href: "/cohort" },
+  { label: "Education", href: "/education" },
   { label: "Contact Us", href: "/contact" },
 ];
 
@@ -39,7 +42,9 @@ export function Navbar() {
 
           <div className="hidden md:flex items-center gap-4">
             <Button asChild className="rounded-full px-6 font-semibold shadow-md shadow-primary/20">
-              <Link href="/contact">Join Us</Link>
+              <a href="https://www.paypal.com/ncp/payment/PVZGM9X3XHQAU" target="_blank" rel="noopener noreferrer">
+                Donate
+              </a>
             </Button>
           </div>
 
@@ -74,7 +79,14 @@ export function Navbar() {
                 </Link>
               ))}
               <Button asChild className="mt-2 rounded-full font-semibold">
-                <Link href="/contact" onClick={() => setMenuOpen(false)}>Join Us</Link>
+                <a 
+                  href="https://www.paypal.com/ncp/payment/PVZGM9X3XHQAU" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Donate
+                </a>
               </Button>
             </div>
           </motion.div>

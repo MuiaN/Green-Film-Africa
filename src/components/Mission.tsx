@@ -17,36 +17,36 @@ export function Mission() {
             >
               <h2 className="text-primary font-bold tracking-wider uppercase text-sm mb-3">Our Mission</h2>
               <h3 className="text-4xl md:text-5xl font-black font-heading tracking-tight text-foreground mb-6 leading-tight">
-                Every cleanup tells a story. <br/>
-                <span className="text-black/40">Every story drives change.</span>
+                Regenerative Filmmaking <br/>
+                <span className="text-black/40">for a Sustainable Africa.</span>
               </h3>
               
               <div className="space-y-6 text-lg text-foreground/70 leading-relaxed mb-10">
                 <p>
-                  We are on a mission to restore Africa's most degraded environments — cleaning up polluted rivers, forests, and urban spaces while documenting the journey through powerful storytelling.
+                  Green Film Africa is a pan-African sustainable filmmaking initiative dedicated to creating viable networks and solutions for a sustainable creative industry.
                 </p>
                 <p className="font-medium text-foreground/90 border-l-4 border-accent pl-6 py-2">
-                  Africa holds 25% of the world's biodiversity. We protect and restore these irreplaceable ecosystems, partnering with local communities to reverse the tide of environmental destruction.
+                  We specialize in consultancy for green film production, CO₂ expertise, and training in sustainable project management. We believe the future lies in eco-friendly solutions that benefit both the environment and stakeholders.
                 </p>
               </div>
 
               <div className="grid sm:grid-cols-2 gap-8">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                    <Droplets className="w-6 h-6 text-primary" />
+                    <Globe className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-foreground mb-1">River Restoration</h4>
-                    <p className="text-sm text-foreground/60">Cleaning vital waterways supporting local communities.</p>
+                    <h4 className="font-bold text-foreground mb-1">Pan-African Reach</h4>
+                    <p className="text-sm text-foreground/60">Connecting you to green film production experts across the continent.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center shrink-0">
-                    <Globe className="w-6 h-6 text-accent" />
+                    <TreePine className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-foreground mb-1">Global Impact</h4>
-                    <p className="text-sm text-foreground/60">Documenting our efforts to inspire worldwide action.</p>
+                    <h4 className="font-bold text-foreground mb-1">Regenerative Practice</h4>
+                    <p className="text-sm text-foreground/60">Ensuring production is regenerative, not just sustainable.</p>
                   </div>
                 </div>
               </div>

@@ -1,8 +1,10 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
+import { StatsBar } from "@/components/StatsBar";
 import { Mission } from "@/components/Mission";
-import { WasteToValue } from "@/components/WasteToValue";
-import { PartnershipForm } from "@/components/PartnershipForm";
+import { GreenDays } from "@/components/GreenDays";
+import { Wellness } from "@/components/Wellness";
+import { JoinMovement } from "@/components/JoinMovement";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
@@ -11,9 +13,11 @@ export default function Home() {
       <Navbar />
       <main className="flex-1">
         <Hero />
+        <StatsBar />
         <Mission />
-        <WasteToValue />
-        <PartnershipForm />
+        <GreenDays />
+        <Wellness />
+        <JoinMovement />
       </main>
       <Footer />
     </div>

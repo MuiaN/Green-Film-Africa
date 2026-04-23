@@ -30,7 +30,7 @@ export function Hero() {
                 animate={{ opacity: [1, 0, 1] }}
                 transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
               />
-              Restoring ecosystems in Africa
+              Brooks Media Ltd · Nairobi, Africa
               <motion.span 
                 className="w-2 h-2 rounded-full bg-primary"
                 animate={{ opacity: [0, 1, 0] }}
@@ -45,8 +45,8 @@ export function Hero() {
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl text-white/80 leading-relaxed mb-10 max-w-2xl mx-auto font-medium">
-              Green Film Africa leads transformative environmental cleanup, biodiversity restoration, and circular economy innovation across Africa.
+            <p className="text-lg md:text-xl text-white/80 leading-relaxed mb-10 max-w-3xl mx-auto font-medium">
+              Africa's first regenerative filmmaking movement — building sustainable networks, circular economies, and climate stories from the classroom to the credit reel.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4">

@@ -1,27 +1,41 @@
 import { motion, type Variants } from "framer-motion";
-import { Sprout, TreePine, Recycle } from "lucide-react";
+import { RefreshCcw, LayoutPanelLeft, LineChart, Repeat, Sprout } from "lucide-react";
 
 const cards = [
   {
-    icon: Sprout,
-    title: "Organic Manure Production",
-    desc: "We convert organic waste into premium compost and manure, feeding the trees of tomorrow's forests.",
+    icon: RefreshCcw,
+    title: "Rethink",
+    desc: "Challenge every assumption from the script stage. Does this scene need a flight? Does this set need new lumber? Design the problem out before cameras roll.",
     color: "text-primary",
     bg: "bg-primary/10"
   },
   {
-    icon: TreePine,
-    title: "Reforestation Programs",
-    desc: "Our compost-enriched planting initiatives restore native tree canopies and reverse desertification.",
+    icon: LayoutPanelLeft,
+    title: "Redesign",
+    desc: "Redesign your production system. Circular props, local crew, solar power, zero-waste catering. The best sustainability decision is one you never have to reverse.",
     color: "text-accent",
     bg: "bg-accent/20"
   },
   {
-    icon: Recycle,
-    title: "Circular Economy",
-    desc: "Nothing is wasted. Every material recovered from cleanup becomes a resource in our regenerative supply chain.",
+    icon: LineChart,
+    title: "Reduce",
+    desc: "Measure your carbon. Use a CO₂ calculator. Track fuel, flights, food, and waste every day. What gets measured gets managed.",
     color: "text-secondary-foreground",
     bg: "bg-secondary"
+  },
+  {
+    icon: Repeat,
+    title: "Reuse",
+    desc: "Rent wardrobes, share props between productions, keep mitumba over fast fashion. One production's waste is another's resource. That's PropBank™.",
+    color: "text-primary",
+    bg: "bg-primary/10"
+  },
+  {
+    icon: Sprout,
+    title: "Regenerate",
+    desc: "Leave the location better than you found it. Plant trees. Train locals. Partner with the community. Give back more than you took. This is the goal.",
+    color: "text-accent",
+    bg: "bg-accent/20"
   }
 ];
 
@@ -57,12 +71,12 @@ export function WasteToValue() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-primary font-bold tracking-wider uppercase text-sm mb-3">Circular Innovation</h2>
+            <h2 className="text-primary font-bold tracking-wider uppercase text-sm mb-3">Our Framework</h2>
             <h3 className="text-4xl md:text-5xl font-black font-heading tracking-tight text-foreground mb-6">
-              Waste Into Value
+              The 5 Rs of Regenerative Filmmaking
             </h3>
             <p className="text-lg text-foreground/70 leading-relaxed">
-              We don't just clean up — we regenerate. By turning environmental hazards into ecological assets, we create a closed-loop system that breathes life back into the soil.
+              Beyond reduce-reuse-recycle. A complete system upgrade for how African productions relate to the world they film in.
             </p>
           </motion.div>
         </div>
@@ -77,8 +91,8 @@ export function WasteToValue() {
               className="relative rounded-3xl overflow-hidden shadow-xl aspect-square"
             >
               <img 
-                src="/images/waste-to-value.png" 
-                alt="Hands holding compost and sapling" 
+                src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200" 
+                alt="Regenerative environmental growth" 
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-black/10 mix-blend-overlay" />

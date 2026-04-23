@@ -3,92 +3,92 @@ import { Link } from "wouter";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Film, Recycle, TreePine, Sprout, Droplets, Wind, ArrowRight } from "lucide-react";
+import { Target, BarChart3, GraduationCap, Globe, Recycle, Handshake, ArrowRight } from "lucide-react";
 import { fadeUp, stagger } from "@/lib/animations";
 
 const services = [
   {
-    icon: Droplets,
-    title: "Environmental Cleanup",
-    tag: "Core Service",
+    icon: Target,
+    title: "Consultancy & Project Management",
+    tag: "Productions",
     tagColor: "bg-blue-100 text-blue-700",
-    desc: "We organise and execute large-scale cleanup operations across Lake Victoria, the Indian Ocean coastline, and Kenya's urban environments. Our teams work with local communities to remove waste that threatens vital water towers.",
+    desc: "End-to-end green production planning for feature films, series, documentaries, and branded content. We embed sustainability from the script stage to final delivery.",
     features: [
-      "Nairobi and Athi River restoration",
-      "Forest floor restoration",
-      "Indian Ocean beach cleanups",
-      "Post-cleanup environmental assessment",
-      "Community volunteer coordination",
+      "Script-stage sustainability design",
+      "Feature film & series planning",
+      "Branded content strategy",
+      "End-to-end project management",
+      "Green production plans",
     ],
   },
   {
-    icon: Film,
-    title: "Environmental Documentary",
-    tag: "Storytelling",
+    icon: BarChart3,
+    title: "CO₂ Expertise & Resource Management",
+    tag: "Carbon & ESG",
     tagColor: "bg-amber-100 text-amber-700",
-    desc: "Our in-house film team documents every cleanup, restoration project, and circular economy initiative. We produce compelling short films, long-form documentaries, and social content that drives awareness, policy, and funding.",
+    desc: "Carbon auditing across Scope 1, 2, and 3 emissions. We use the Albert calculator and build full ESG reports that satisfy Netflix, BBC, and international requirements.",
     features: [
-      "Short-form documentary production",
-      "Social and digital content",
-      "Policy briefing films",
-      "Impact storytelling for NGOs and donors",
-      "Educational series for schools",
+      "Carbon auditing (Scope 1, 2, & 3)",
+      "Albert calculator integration",
+      "ESG reporting for global brands",
+      "Resource management strategy",
+      "Sustainability disclosure data",
     ],
   },
   {
-    icon: Sprout,
-    title: "Organic Manure Production",
-    tag: "Circular Economy",
+    icon: GraduationCap,
+    title: "Training & Education",
+    tag: "Capacity Building",
     tagColor: "bg-green-100 text-green-700",
-    desc: "Organic waste recovered from cleanups is processed into high-quality compost and organic manure. This waste-to-value system creates income, reduces landfill burden, and feeds the trees in our reforestation programmes.",
+    desc: "Workshops, masterclasses, and accredited training in green film production and sustainable project management — for students and industry professionals alike.",
     features: [
-      "Collection of organic waste streams",
-      "Composting and bioconversion",
-      "Premium organic manure production",
-      "Agricultural distribution partnerships",
-      "Soil health monitoring",
+      "Green production masterclasses",
+      "Sustainable project management",
+      "Youth climate film curriculum",
+      "Albert certification prep",
+      "Zero-waste on-set habits",
     ],
   },
   {
-    icon: TreePine,
-    title: "Reforestation Programs",
-    tag: "Restoration",
+    icon: Globe,
+    title: "Industry Networking",
+    tag: "Ecosystem Building",
     tagColor: "bg-emerald-100 text-emerald-700",
-    desc: "We plant native tree species enriched with our own organic manure, focusing on Kenya's 'Water Towers' and degraded lands. Our reforestation work targets the Mau Forest, Aberdares, and urban corridors.",
+    desc: "We connect African productions to a growing ecosystem of green film experts, eco-stewards, circular resource providers, and sustainability-aligned commissioners.",
     features: [
-      "Native species selection and propagation",
-      "Community-led planting campaigns",
-      "Tree tracking and survival monitoring",
-      "Carbon sequestration reporting",
-      "Long-term canopy management",
+      "Connection to eco-stewards",
+      "Sustainable vendor database",
+      "Commissioner alignment",
+      "Pan-African expert network",
+      "Community stewardship protocols",
     ],
   },
   {
     icon: Recycle,
-    title: "Circular Economy Consulting",
-    tag: "Advisory",
+    title: "PropBank™ Circular Database",
+    tag: "Circular Economy",
     tagColor: "bg-purple-100 text-purple-700",
-    desc: "We help corporations, municipalities, and NGOs design circular economy systems for waste management and resource recovery. Our practical approach is built on real field experience, not theory.",
+    desc: "Africa's first circular film resource marketplace — connecting productions that have with productions that need. List, rent, swap, or donate assets.",
     features: [
-      "Waste audit and mapping",
-      "Circular system design",
-      "Stakeholder engagement workshops",
-      "Policy and regulatory advisory",
-      "Impact measurement frameworks",
+      "Prop & wardrobe marketplace",
+      "Waste diversion tracking",
+      "Carbon saving metrics",
+      "Listing & search database",
+      "Asset circulation management",
     ],
   },
   {
-    icon: Wind,
-    title: "Biodiversity Preservation",
-    tag: "Conservation",
+    icon: Handshake,
+    title: "Institutional Partnerships",
+    tag: "Partnerships",
     tagColor: "bg-teal-100 text-teal-700",
-    desc: "We work with KWS, local communities, and environmental agencies to protect critical biodiversity hotspots across the East African Rift Valley. Our approach combines cleanup and conservation science.",
+    desc: "Strategic collaboration with broadcasters, film commissions, and NGOs to embed green standards across the African creative sector.",
     features: [
-      "Endangered species habitat assessment",
-      "Habitat restoration design",
-      "Community ranger training",
-      "Wildlife corridor establishment",
-      "Biodiversity impact reporting",
+      "Broadcaster collaboration",
+      "Film commission integration",
+      "NGO & development funding",
+      "Creative sector policy work",
+      "Educational system embedding",
     ],
   },
 ];
@@ -113,10 +113,10 @@ export default function Services() {
                   <Recycle className="w-4 h-4" /> What We Do
                 </motion.div>
                 <motion.h1 variants={fadeUp} className="text-5xl md:text-6xl font-black font-heading text-foreground leading-tight mb-6">
-                  From cleanup to <span className="text-primary">circular economy</span> — end to end.
+                  Strategic and <span className="text-primary">systemic solutions</span> for African film.
                 </motion.h1>
                 <motion.p variants={fadeUp} className="text-xl text-muted-foreground leading-relaxed">
-                  Our services are designed to work together as an integrated system. Every activity reinforces the others, creating lasting impact rather than isolated interventions.
+                  Tailored for production companies, broadcasters, and institutions. We bridge the gap between creative media, ecological responsibility, and industry growth.
                 </motion.p>
               </motion.div>
 

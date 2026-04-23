@@ -51,8 +51,9 @@ export function PartnershipForm() {
                       <Mail className="w-5 h-5 text-accent" />
                     </div>
                     <div>
-                      <div className="text-sm text-primary-foreground/60 font-medium">Email Us</div>
-                      <div className="font-semibold">partners@greenfilmafrica.org</div>
+                      <div className="text-sm text-primary-foreground/60 font-medium">Contact Us</div>
+                      <div className="font-semibold">info@greenfilmafrica.org</div>
+                      <div className="text-xs text-primary-foreground/40">terrateah@gmail.com</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
