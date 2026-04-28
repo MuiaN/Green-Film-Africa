@@ -4,6 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Mail, MapPin, Phone, Leaf, CheckCircle2, Loader2 } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 import { fadeUp, stagger } from "@/lib/animations";
 
 const contactInfo = [
@@ -79,6 +80,7 @@ export default function Contact() {
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState<Partial<FormState>>({});
+  const { toast } = useToast();
 
   const validate = () => {
     const errs: Partial<FormState> = {};
@@ -98,11 +100,35 @@ export default function Contact() {
     }
     setErrors({});
     setSubmitting(true);
-    await new Promise((r) => setTimeout(r, 1500));
-    setSubmitting(false);
-    setSubmitted(true);
-  };
 
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
+      setSubmitted(true);
+      toast({
+        title: "Message Sent!",
+        description: "Thank you — we'll be in touch within 5 working days.",
+      });
+    } catch (error) {
+      console.error('Submission error:', error);
+      alert('Failed to send message. Please try again later.');
+      toast({
+        title: "Submission Failed",
+        description: "There was an error sending your message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setSubmitting(false);
+    }
+  };
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
     if (errors[e.target.name as keyof FormState]) {
@@ -292,12 +318,10 @@ export default function Contact() {
                           className={inputClass(false) + " cursor-pointer"}
                         >
                           <option value="">Select a subject</option>
-                          <option value="partnership">Partnership Opportunity</option>
-                          <option value="services">Service Enquiry</option>
-                          <option value="media">Media and Press</option>
-                          <option value="volunteer">Volunteering</option>
-                          <option value="donation">Donation and Funding</option>
-                          <option value="other">Other</option>
+                          <option value="Prop & Wardrobe Bank submission">Prop & Wardrobe Bank submission</option>
+                          <option value="General partnership enquiry">General partnership enquiry</option>
+                          <option value="SinemaTherapy interest">SinemaTherapy interest</option>
+                          <option value="Workshop booking request">Workshop booking request</option>
                         </select>
                       </Field>
                     </div>
