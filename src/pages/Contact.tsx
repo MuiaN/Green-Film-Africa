@@ -255,7 +255,7 @@ export default function Contact() {
                     <div>
                       <h3 className="text-2xl font-black font-heading text-foreground mb-3">Message Received</h3>
                       <p className="text-muted-foreground max-w-md">
-                        Thank you for reaching out. Our team will review your message and get back to you within 2 business days.
+                        Thank you for reaching out. Our team will review your message and get back to you within 5 working days.
                       </p>
                     </div>
                     <Button
